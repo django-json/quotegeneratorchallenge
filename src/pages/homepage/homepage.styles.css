@@ -1,0 +1,17 @@
+.homepage > .author-link {
+	margin: 0;
+	margin-left: calc(var(--space-xl) * 1.8);
+}
+
+@media screen and (max-width: 787.98px){
+	.homepage {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.homepage > .author-link {
+		margin-left: var(--space-md);
+		padding: var(--space-lg) var(--space-md);
+	}
+} 

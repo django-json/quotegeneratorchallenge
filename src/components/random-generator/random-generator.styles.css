@@ -1,0 +1,16 @@
+.random-generator {
+	display: flex;
+	align-items: center;
+	flex-basis: auto;
+}
+
+.random-generator > p {
+	font-size: var(--text-md);
+	font-weight: 500;
+	color: var(--color-grey-2);
+	margin-right: calc(var(--space-xs) * 0.7);
+}
+
+.random-generator > i {
+	cursor: pointer;
+}

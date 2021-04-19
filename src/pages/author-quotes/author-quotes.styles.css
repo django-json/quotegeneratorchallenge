@@ -1,0 +1,12 @@
+/* Removing default left padding of a list element*/
+.author-quotes > .list {
+	padding-left: 0;
+}
+
+.author-quotes__author {
+	font-size: var(--text-xl);
+	font-weight: 700;
+	color: var(--color-black);
+  	margin: 0;
+  	margin-left: calc(var(--space-xl) * 1.09);
+}

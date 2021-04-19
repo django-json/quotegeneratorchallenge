@@ -1,0 +1,9 @@
+.quote-item {
+	font-size: var(--text-xl);
+	font-weight: 500;
+	color: var(--color-black);
+	list-style: none;
+	border-left: 8px solid var(--color-orange);
+	padding-left: var(--space-xl);
+	margin: var(--space-xl) 0;
+}

@@ -1,38 +1,90 @@
+:root {
+  --primary-font: 'Raleway', sans-serif;
+  --secondary-font: 'Montserrat', sans-serif;
+
+  /* Spacing | Global */
+  --space-unit: 1em;
+  --space-xs: calc(0.5 * var(--space-unit));
+  --space-sm: calc(0.7 * var(--space-unit));
+  --space-md: calc(1.25 * var(--space-unit));
+  --space-lg: calc(2 * var(--space-unit));
+  --space-xl: calc(3 * var(--space-unit));
+
+  /* Font Sizes | Global */
+  --text-xl: 36px;
+  --text-lg: 24px;
+  --text-md: 18px;
+  --text-sm: 14px;
+
+  /* Colors | Global */
+  --color-white: #F2F2F2;
+  --color-black: #000000;
+  --color-grey-1: #333333;
+  --color-grey-2: #4F4F4F;
+  --color-grey-3: #828282;
+  --color-orange: #F7DF94;
+}
+
+.material-icons {
+  font-size: 20px;
+  color: var(--color-grey-2);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  font-family: var(--primary-font);
+  padding: 0 var(--space-xl);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.random-generator {
+  justify-content: flex-end;
+  margin-bottom: var(--space-xl);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.homepage,
+.author-quotes {
+  margin: 0 calc(var(--space-xl) * 6);
+}
+
+@media screen and (max-width: 1200px) {
+  .homepage,
+  .author-quotes {
+    margin: 0 calc(var(--space-xl) * 4);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 991.98px) {
+  .homepage,
+  .author-quotes {
+    margin: 0 calc(var(--space-xl) * 2);
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  :root {
+    /* Font Sizes | Global */
+    --text-xl: 24px;
+    --text-lg: 18px;
+    --text-md: 16px;
+  }
+
+  .App {
+    padding: 0 var(--space-sm);
+  }
+
+  .homepage,
+  .author-quotes {
+    margin: 0;
+  }
+
+  .author-quotes > .author-quotes__author {
+    margin-left: calc(var(--space-md) * 1.2);
+  }
+
+  .homepage > .quote-item,
+  .author-quotes .quote-item {
+    border-left-width: 6px;
+    padding-left: var(--space-md);
+    margin: var(--space-lg) 0;
   }
 }
